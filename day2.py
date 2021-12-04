@@ -6,4 +6,15 @@ commandList = []
 for item in commandInput:
     commandList.append(item.split())
 
+horizontal = 0
+vertical = 0
 
+for command, value in commandList:
+    if command == 'forward':
+        horizontal += int(value)
+    elif command == 'up':
+        vertical -= int(value)
+    elif command == 'down':
+        vertical += int(value)
+
+print(horizontal*vertical)
