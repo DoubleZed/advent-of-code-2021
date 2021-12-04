@@ -8,8 +8,11 @@ for item in commandInput:
 
 horizontal = 0
 vertical = 0
+aim = 0
 
-for command, value in commandList:
+### Part one ###
+
+""" for command, value in commandList:
     if command == 'forward':
         horizontal += int(value)
     elif command == 'up':
@@ -17,4 +20,20 @@ for command, value in commandList:
     elif command == 'down':
         vertical += int(value)
 
+print(horizontal*vertical) """
+
+### Part two ###
+
+for command, value in commandList:
+    if command == 'forward':
+        horizontal += int(value)
+        vertical += aim * int(value)
+    elif command == 'up':        
+        aim -= int(value)
+    elif command == 'down':        
+        aim += int(value)
+
 print(horizontal*vertical)
+
+
+
