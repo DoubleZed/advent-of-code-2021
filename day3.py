@@ -20,5 +20,9 @@ for i in range(len(lineInput[0])):
     else:
         gammaRate += str(1)
 
-print(gammaRate)
-print(int(gammaRate, 2))
+#Getting Epsilon Rate
+epsilonRate = gammaRate.translate(str.maketrans("01","10"))
+
+#Calculating Power Consumption in decimal
+powerConsumption = int(gammaRate, 2) * int(epsilonRate, 2)
+print(powerConsumption)
