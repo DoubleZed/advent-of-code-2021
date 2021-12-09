@@ -32,7 +32,7 @@ print(powerConsumption) """
 
 #Part Two
 def findMostLeastCommon (inputList,bitPosition,commonality):
-    numListLines = numLines = sum(1 for line in inputList)
+    numListLines = sum(1 for line in inputList)
     zeros = 0
     ones = 0
     for j in range(numListLines-1):
@@ -52,3 +52,4 @@ def findMostLeastCommon (inputList,bitPosition,commonality):
             commonValue = "1"
     commonValues = [i for i in inputList if i.startswith(commonValue)]  
     return commonValues
+
