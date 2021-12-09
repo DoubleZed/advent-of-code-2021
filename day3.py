@@ -5,7 +5,8 @@ inputPath = os.path.join(os.getcwd(),"input","input_day3.txt")
 lineInput = [line.rstrip() for line in open(inputPath,"r")]
 numLines = sum(1 for line in lineInput)
 
-#Getting Gamma Rate
+# Part One
+""" #Getting Gamma Rate
 gammaRate = ""
 for i in range(len(lineInput[0])):
     zeros = 0
@@ -25,4 +26,6 @@ epsilonRate = gammaRate.translate(str.maketrans("01","10"))
 
 #Calculating Power Consumption in decimal
 powerConsumption = int(gammaRate, 2) * int(epsilonRate, 2)
-print(powerConsumption)
+print(powerConsumption) """
+
+#Part Two
