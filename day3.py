@@ -28,4 +28,27 @@ epsilonRate = gammaRate.translate(str.maketrans("01","10"))
 powerConsumption = int(gammaRate, 2) * int(epsilonRate, 2)
 print(powerConsumption) """
 
+
+
 #Part Two
+def findMostLeastCommon (inputList,bitPosition,commonality):
+    numListLines = numLines = sum(1 for line in inputList)
+    zeros = 0
+    ones = 0
+    for j in range(numListLines-1):
+        if inputList[j][bitPosition] == "0":
+            zeros += 1
+        elif inputList[j][bitPosition] == "1":
+            ones += 1
+    if commonality == "most":
+        if ones >= zeros:
+            commonValue = "1"
+        else:
+            commonValue = "0"            
+    elif commonality == "least":
+        if zeros >= ones:
+            commonValue = "0"
+        else:
+            commonValue = "1"
+    commonValues = [i for i in inputList if i.startswith(commonValue)]  
+    return commonValues
